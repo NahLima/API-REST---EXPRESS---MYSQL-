@@ -68,7 +68,7 @@ class Atendimento {
             }
         })
     }
-    
+
     altera(id, valores, res) {
         if(valores.data) {
             valores.data = moment(valores.data, 'DD/MM/YYYY').format('YYYY-MM-DD HH:MM:SS')
@@ -91,7 +91,7 @@ class Atendimento {
             if(erro) {
                 res.status(400).json(erro)
             } else {
-                res.status(200).json({id})
+                res.status(200).json({mensagem: "agendamento cancelado" , id})
             }
         })
     }
